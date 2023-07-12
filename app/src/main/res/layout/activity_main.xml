@@ -7,15 +7,6 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
-    <!--    <Button-->
-    <!--        android:id="@+id/camera_btn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Click Me"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <include
         android:id="@+id/app_bar_main"
         layout="@layout/app_bar_main"
@@ -38,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="280dp"
                 android:layout_margin="12dp"
+                android:src="@drawable/ic_camera"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -47,8 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
+                android:hint="@string/extracting_text_will_display_here"
                 android:padding="5dp"
                 android:textColor="@color/green"
+                android:textColorHint="@color/gray"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +66,23 @@
             android:id="@+id/clear_iv"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_backspace"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/camera_btn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/light_green" />
+
+        <TextView
+            android:id="@+id/clear_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:textColor="@color/light_green"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/clear_iv"
+            app:layout_constraintStart_toStartOf="@id/clear_iv"
+            app:layout_constraintTop_toBottomOf="@id/clear_iv" />
 
         <ImageView
             android:id="@+id/camera_btn"
@@ -94,12 +99,23 @@
             android:id="@+id/copy_iv"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_content_copy"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/camera_btn"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/light_green" />
+
+        <TextView
+            android:id="@+id/copy_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy"
+            android:textColor="@color/light_green"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/copy_iv"
+            app:layout_constraintStart_toStartOf="@id/copy_iv"
+            app:layout_constraintTop_toBottomOf="@id/copy_iv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
